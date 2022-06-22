@@ -1,0 +1,581 @@
+* {
+  margin: 0%;
+  padding: 0%;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+   /* background-color: rgb(201, 201, 201);  */
+   
+}
+.header {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/image.jpg/yu.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+
+h1{
+  color: rgb(54, 7, 7);
+  font-family: "roboto"
+  font-weight 150;
+}
+
+nav {
+  display: flex;
+  padding: 2% 6%;
+  align-items: center;
+  justify-content: space-between;
+}
+nav img {
+  width: 150px;
+}
+.nav-link {
+  display: 1;
+  text-align: right;
+}
+a {
+  text-decoration: none;
+  color: #fff;
+  cursor: pointer;
+}
+ .nav-link ul li {
+  color: #fff;
+  list-style: none;
+  
+  display: inline-block;
+  padding: 8px 12px;
+  position: relative;
+  font-size: 14px;
+} 
+ .nav-link ::after {
+  content: "";
+  width: 0%;
+  height: 2px;
+  background: #f44336;
+  display: block;
+  margin: auto;
+  transition: 0.5s;
+} 
+.nav-link :hover::after {
+  width: 100%; 
+  
+}
+
+
+.text-box {
+  width: 90%;
+  color: white;
+  top: 50%;
+  left: 0.9%;
+  position: absolute;
+  text-align: center;
+  transform: (-50%, -50%);
+}
+.text-box h1 {
+  color: white;
+  text-shadow: 5px -3px 0px rgb(80, 3, 3);
+  font-family: "roboto";
+  font-size: 60px;
+  margin: 10px 0 40px;
+  border: 1px dotted black;
+  box-shadow: 5px 5px 0px rgba(14, 12, 13, 0.788);
+  padding: 20px;
+  border-radius: 15px;
+  background-color: rgba(110, 13, 13, 0.082);
+}
+.about-col p{
+  columns: 2;
+}
+.text-button {
+  display: inline-block;
+  text-decoration: none;
+  color: #fff;
+  border: 1px solid white;
+  font-size: 14px;
+  padding: 12px 34px;
+  background: transparent;
+  position: relative;
+  cursor: pointer;
+  margin-top: 35px;
+}
+.text-button:hover {
+  border: 2px dotted #fff;
+  background:rgb(80, 3, 3);
+  transition: 0.8s;
+}
+.nav-link fa {
+  display: none;
+}
+/* ---------------------media-querry------------------------- */
+@media (max-width: 700px;) {
+  /* .testimon{
+    flex-direction: column;
+  } */
+  .text-box h1 {
+    font-size: 20px;
+  }
+  .nav-link {
+    display: block;
+  }
+  .blog-row-2{
+    flex-direction: column;
+  }
+  .nav-link {
+    position: absolute;
+    background: #f44336;
+    width: 200px;
+    height: 100vh;
+    top: 0;
+    right: 0;
+    text-align: left;
+    z-index: 2;
+  }
+  nav .fa {
+    display: block;
+    color: #fff;
+    margin: 10px;
+    font-size: 22px;
+    cursor: pointer;
+  }
+  .nav-link ul {
+    padding: 30px;
+  }
+  .row {
+    flex-direction: column;
+  }
+}
+/* ----------------------------courses-------------------- */
+.course {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  /* background: #11d6dd; */
+}
+.course h1 {  
+  border: 2px dotted chartreuse;
+  border-radius: 35px;
+  background: #8c1515;
+  color: #fff;
+  padding: 7px 0;
+  font-weight: 600;
+  margin: 30px 0;
+  font-size: 36px;
+}
+.course p {
+  color: #f44336;
+  font-size: 20px;
+  font-weight: 300;
+  line-weight: 22px;
+  padding: 10px;
+}
+.row {
+  display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+}
+.course-col {
+  background: #11d6dd;
+  border-radius: 10px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+  padding: 20px 12px;
+  flex-basis: 33%;
+}
+/* -------------campus---------------- */
+.campus h1{
+  border: 2px dotted chartreuse;
+  border-radius: 35px;
+  background: #8c1515;
+  color: #fff;
+  padding: 7px 0;
+  font-weight: 600;
+  margin: 30px 0;
+  font-size: 36px;
+}
+.campus {
+  /* justify-content: center; */
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 50px;
+  /* background: #6aa893;  */
+}
+.campus-row-top {
+  display: flex;
+  gap: 10px;
+}
+.campus-row {
+  flex-basis: 32%;
+  position: relative;
+  border-radius: 10px;
+  margin-top: 20px;
+  margin-bottom: 30px;
+  overflow: hidden;
+}
+.campus-row img {
+  width: 100%;
+}
+.campus-layer {
+  background: transparent;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  margin-top: 5px;
+  transition: 0.5s;
+}
+.campus-layer:hover {
+  background: rgba(206, 104, 104, 0.7);
+  border: 1px dotted black;
+  box-shadow: 5px 5px 0px rgba(14, 12, 13, 0.788);
+  padding: 20px;
+  border-radius: 15px;
+  /* background-color: rgba(180, 164, 180, 0); */
+}
+.campus-layer h3 {
+  width: 100%;
+  color: rgb(228, 224, 20);
+  font-weight: 100px;
+  font-size: 22px;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
+}
+.campus-layer:hover h3 {
+  bottom: 49%;
+  opacity: 1;
+}
+/* -----------------------faciity-------------------------- */
+.facility {
+  width: 80%;
+  margin: auto;
+  text-align: center;
+  padding-top: 100px;
+  /* background: #13646e;  */
+}
+.facility h1{border: 2px dotted chartreuse;
+  border-radius: 35px;
+  background: #8c1515;
+  color: #fff;
+  padding: 7px 0;
+  font-weight: 600;
+  margin: 30px 0;
+  font-size: 36px;
+  font-family: "roboto"
+  
+
+}
+.facility-row {
+  flex-basis: 31%;
+  border-radius: 12px;
+  margin-bottom: 5%;
+  text-align: left;
+}
+.facility-row img {
+  width: 100%;
+  border-radius: 12px;
+}
+.testimon {
+  width: 80%;
+  margin: auto;
+  padding-top: 100px;
+  text-align: center;
+  /* background: #f44336;  */
+}
+.testimon-row {
+  display: flex;
+  flex-basis: 44%;
+  margin-bottom: 5px;
+  text-align: left;
+  cursor: pointer;
+  padding: 25px;
+  gap: 30px;
+}
+.testimon-row img {
+  height: 50px;
+  width: 50px;
+  border-radius: 50%;
+  /* padding: 25px; */
+  margin-right: 30px;
+}
+.testimon-row p {
+  padding: 0px;
+}
+.testimon-row h4 {
+  text-align: left;
+  margin-top: 15px;
+}
+.col-2 {
+  display: flex;
+}
+@media (max-width: 700px) {
+  .testimon-row img {
+    margin-left: 0px;
+    margin-right: 15px;
+  }
+}
+/* ---------------------------ENROLMENT SECTION--------------- */
+.call-1 {
+  width: 80%;
+  margin: 50% auto;
+  text-align: center;
+  border-radius: 10px;
+  padding: 100px;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)),
+    url(/image.jpg/banner2.jpg);
+  background-position: center;
+  background-size: cover;
+  color: white;
+}
+.call-link {
+  /* border: 1px solid black; */
+  text-align-last: center;
+  font-size: 20px;
+  text-decoration: none;
+  /* margin-bottom: 50px; */
+}
+.call-link :active {
+  color: #f44336;
+}
+.call-link :visited {
+  color: #11d6dd;
+}
+.call-link :hover {
+  transition: 0.5s;
+}
+footer {
+  text-align: center;
+  padding: 30px 0;
+  width: 100%;
+  background: #d4d0d0; 
+  
+}
+.footer h4{
+  background: #8c1515;
+  color: #fff;
+  padding: 7px 0;
+
+  font-size: 36px;
+  margin-bottom: 25px;
+  margin-top: 20px;
+  font-weight: 500;
+
+}
+.footer-icon .fa{
+  color: #f44336;
+  margin: 0 13px,
+  cursor: pointer;
+  padding: 19px 0;
+}
+
+/* --------------------about--------------------- */
+.sub-header-about {
+  min-height: 100vh;
+  width: 100%;
+  background-image: linear-gradient(rgba(4, 9, 30, 0.7), rgba(4, 9, 30, 0.7)),
+    url(/image.jpg/we.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+ /* .text-box-about {
+  width: 90%;
+  color: white;
+  top: 50%;
+  left: 0.9%;
+  position: absolute;
+  text-align: center;
+  transform: (-50%, -50%);
+
+.text-box-about h1{
+  font-family: "roboto";
+  font-size: 60px;
+  
+
+
+} */
+/* -----------------------------table-------------------------------- */
+table {
+  border: 2px solid rgb(46, 5, 5);
+  border-collapse: collapse;
+  
+  margin-bottom: 30px
+}
+table td {
+  text-align: center;
+  padding: 5px;
+}
+table tr:hover {
+  background-color: rgb(190, 128, 128);
+}
+table tr :hover {
+  background-color: grey;
+}
+
+.about-us{
+ width: 80% ;
+ margin: auto;
+ padding-top: 80px;
+ padding-bottom: 50px;
+}
+.about-row{
+  display: flex; 
+  flex-basis: 31%;
+  gap: 10px;
+  padding: 10px;
+}
+.about-col img{
+  width: 100%;
+  
+}
+.about-col h1{
+  padding-top: 0;
+  margin-top: 50px;
+  margin-bottom: 30px;
+}
+.about-text-button{
+  /* border: 1px dotted black; */
+  border-radius: 35px;
+  color: #8c1515;
+  font-size: 18px;
+  padding: 15px;
+  margin-top: 30px 0;
+
+
+}
+.about-text-button :hover{
+   color: aqua;}
+  /* transition: 0.3s;
+  font-size: 3em;
+  text-decoration: none;
+  font-family: "roboto";
+  font-size: 1em;
+  transition-duration: 0.3s;
+  transition-property: color;
+  transition-timing-function: linear;
+  color: rgb(145, 23, 23)
+
+} */ 
+
+/* -----------------blog-content--------------- */
+.blog-content{
+
+  width: 80%;
+  margin: auto;
+  padding: 60px 0; 
+}
+.flex-blog{
+   display: flex;
+  margin-top: 5%;
+  justify-content: space-between;
+   
+
+  }
+.blog-row-1{
+  flex-basis: 50%;
+  /* flex-shrink: 1;  */
+}
+.blog-row-1 img{
+  width: 100%;
+}
+.blog-row-1 h3{
+  border: 2px dotted chartreuse;
+  border-radius: 35px;
+  background: #8c1515;
+  color: #fff;
+  padding: 15px 0;
+  font-size: 16px
+  font-weight: 600;
+  margin: 30px 0;
+  text-align: center;
+
+}
+.blog-row-1 p{
+  color: #999;
+  padding: 0;
+}
+.blog-row-2{
+  flex-basis: 31%;
+}
+.blog-row-2 h3{
+  border: 2px dotted chartreuse;
+  border-radius: 35px;
+  background: #f44336;
+  color: #fff;
+  padding: 10px;
+  font-size: 16px
+  font-weight: 600;
+  margin-bottom: 20px;
+
+}
+.blog-row-2 p{
+  color: #999;
+  padding: 0;
+}
+ .blog-row-2 div span{
+  color: #555;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px;
+  box-sizing: border-box;
+}
+    
+.comment-box{
+  width: 100%;
+  border:2px dotted  rgb(85, 4, 4);
+  margin: 40px 0;
+  padding: 10px 20px;
+}
+.comment-box h4{
+text-emphasis: left;
+}
+.comment-box input, comment-form textarea{
+  width: 100%;
+  margin: 12px 0;
+  padding: 18px;
+  box-sizing: border-box;
+  border: none;
+  background: #f0f0f0;
+
+}
+/* .comment-box {
+  width: 100%;
+  margin: 12px 0;
+  padding: 18px;
+  box-sizing: border-box;
+  border: none;
+  background: #f0f0f0; */
+
+} 
+.comment-box button{
+  margin: 15px;
+}
+/* .comment-box form fieldset legend div{
+  width: 100%;
+  margin: 12px 0;
+  padding: 18px;
+  box-sizing: border-box;
+  border: none;
+  background: #f0f0f0; */
+
+} 
+
+/* color: aqua;
+  transition: 0.3s;
+  font-size: 3em;
+  text-decoration: none;
+  font-family: "roboto";
+  font-size: 1em;
+  transition-duration: 0.3s;
+  transition-property: color;
+  transition-timing-function: linear;
+  color: rgb(145, 23, 23) */
+}
